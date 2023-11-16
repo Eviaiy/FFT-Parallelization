@@ -26,4 +26,3 @@ Project Structure
     src/: Source code for each FFT algorithm implementation.
     docs/: Documentation and theoretical background of each FFT algorithm.
     tests/: Unit tests to ensure the reliability and accuracy of implementations.
-    data/: Sample datasets used for testing and performance evaluation.
