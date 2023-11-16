@@ -1,5 +1,5 @@
 # Fast Fourier Transform (FFT) Algorithms Project
-## Overview
+*** Overview ***
 
 This project focuses on the implementation, comparison, and analysis of three distinct Fast Fourier Transform (FFT) algorithms with varying complexities. Each algorithm is chosen to demonstrate different computational trade-offs and use-cases in FFT processing. Our goal is to provide insights into the applicability and performance of these algorithms in diverse scenarios.
 Algorithms
