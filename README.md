@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project focuses on the implementation, comparison, and analysis of three distinct Fast Fourier Transform (FFT) algorithms with varying complexities. Each algorithm is chosen to demonstrate different computational trade-offs and use-cases in FFT processing. Our goal is to provide insights into the applicability and performance of these algorithms in diverse scenarios.
+This project focuses on the implementation, comparison, and analysis of two distinct Fast Fourier Transform (FFT) algorithms with varying complexities. Each algorithm is chosen to demonstrate different computational trade-offs and use-cases in FFT processing. Our goal is to provide insights into the applicability and performance of these algorithms in diverse scenarios.
 
 ## Algorithms
 
@@ -18,19 +18,7 @@ The Cooley-Tukey algorithm, specifically its Radix-2 variant, is a widely-used F
 #### Use-case:
 Ideal for general-purpose applications and educational purposes, particularly when dealing with data sizes that are powers of two.
 
-### 2. Split Radix FFT Algorithm
-
-#### Complexity:
-- **Sequential:** O(N log N)
-- **Parallel:** For the Split Radix FFT, OpenMP can enhance parallel complexity to approximately O(log² N); MPI can reduce it to near O(log N), and CUDA can potentially lower it significantly to around O(log N), benefiting from GPU parallelism.
-
-#### Description:
-An advanced variant of the Cooley-Tukey algorithm, the Split Radix FFT reduces the number of arithmetic operations compared to Radix-2 and Radix-4. While more complex in its implementation, it excels in performance, especially in high-demand computational settings.
-
-#### Use-case:
-Suited for high-performance computing where optimization of arithmetic operations is critical.
-
-### 3. Bluestein's FFT Algorithm (Chirp Z-Transform)
+### 2. Bluestein's FFT Algorithm (Chirp Z-Transform)
 
 #### Complexity:
 - **Sequential:** O(N log N) but with a higher constant factor than Cooley-Tukey
