@@ -10,7 +10,7 @@ This project focuses on the implementation, comparison, and analysis of three di
 
 #### Complexity:
 - **Sequential:** O(N log N)
-- **Parallel:** Hadoop/MapReduce may not offer significant complexity improvements due to distributed computing overhead, OpenMP can enhance parallel complexity to approximately O(log² N) using multi-core processors, MPI has the potential to reduce complexity to near O(log N) based on inter-node communication efficiency, while CUDA can significantly lower complexity, potentially close to O(log N), thanks to extensive GPU parallelism.
+- **Parallel:** OpenMP can enhance parallel complexity to approximately O(log² N) using multi-core processors, MPI has the potential to reduce complexity to near O(log N) based on inter-node communication efficiency, while CUDA can significantly lower complexity, potentially close to O(log N), thanks to extensive GPU parallelism.
 
 #### Description:
 The Cooley-Tukey algorithm, specifically its Radix-2 variant, is a widely-used FFT algorithm. It's a divide-and-conquer approach that efficiently handles sequences of lengths that are powers of 2. This algorithm offers a good balance between ease of implementation and computational efficiency.
@@ -22,7 +22,7 @@ Ideal for general-purpose applications and educational purposes, particularly wh
 
 #### Complexity:
 - **Sequential:** O(N log N)
-- **Parallel:** For the Split Radix FFT, Hadoop/MapReduce might not significantly improve complexity; OpenMP can enhance parallel complexity to approximately O(log² N); MPI can reduce it to near O(log N), and CUDA can potentially lower it significantly to around O(log N), benefiting from GPU parallelism.
+- **Parallel:** For the Split Radix FFT, OpenMP can enhance parallel complexity to approximately O(log² N); MPI can reduce it to near O(log N), and CUDA can potentially lower it significantly to around O(log N), benefiting from GPU parallelism.
 
 #### Description:
 An advanced variant of the Cooley-Tukey algorithm, the Split Radix FFT reduces the number of arithmetic operations compared to Radix-2 and Radix-4. While more complex in its implementation, it excels in performance, especially in high-demand computational settings.
@@ -34,7 +34,7 @@ Suited for high-performance computing where optimization of arithmetic operation
 
 #### Complexity:
 - **Sequential:** O(N log N) but with a higher constant factor than Cooley-Tukey
-- **Parallel:** In Bluestein's FFT algorithm, Hadoop/MapReduce may not offer substantial complexity reductions; OpenMP can achieve parallel complexity around O(log² N); MPI could lower it to near O(log N), and CUDA might significantly reduce it to close to O(log N), utilizing the power of GPU parallelism.
+- **Parallel:** In Bluestein's FFT algorithm, OpenMP can achieve parallel complexity around O(log² N); MPI could lower it to near O(log N), and CUDA might significantly reduce it to close to O(log N), utilizing the power of GPU parallelism.
 
 #### Description:
 This algorithm is tailored for computing DFTs of arbitrary lengths, not just powers of two. It cleverly transforms a DFT into a convolution problem, which is then solved using an FFT of a suitable size. This approach is more intricate than the basic Cooley-Tukey algorithm but provides flexibility in handling diverse data sizes.
@@ -50,7 +50,6 @@ Applicable in situations where the data length is not a power of two, offering v
 
 ## Notes
 
-- **Hadoop/MapReduce:** Often not the best choice for algorithms like FFT due to its overhead and latency issues, more suited for large-scale data processing.
 - **OpenMP/MPI:** More suitable for systems with multiple CPUs or CPU clusters, where inter-process or inter-thread communication is key.
 - **CUDA:** Highly efficient for algorithms that can be parallelized at a fine-grained level, like FFT, especially on large data sets.
 
