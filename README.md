@@ -56,4 +56,4 @@ Applicable in situations where the data length is not a power of two, offering v
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
