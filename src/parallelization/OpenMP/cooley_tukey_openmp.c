@@ -4,6 +4,7 @@
 #include <complex.h>
 #include <omp.h>
 
+
 // Function to perform the Cooley-Tukey FFT
 void cooleyTukeyFFT(complex *X, int N, int stride) {
     if (N == 1) return;

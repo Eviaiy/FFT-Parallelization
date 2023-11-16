@@ -13,7 +13,6 @@
  * the selection and optimization of the algorithm, ensuring the best possible performance
  * for FFT computations on the given hardware.
  */
-
 #include <cufft.h>
 #include <stdio.h>
 
